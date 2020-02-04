@@ -26,7 +26,7 @@ final class MainRouterIMP: NSObject, Router {
     func present(_ module: Presentable?, animated: Bool, with navbar: Bool) {
         if navbar {
             guard let controller = module?.toPresent() else { return }
-            let navigationC۱ontroller = UINavigationController(rootViewController: controller)
+            let navigationController = UINavigationController(rootViewController: controller)
             self.window?.rootViewController?.present(navigationController, animated: animated, completion: nil)
         } else {
             self.present(module, animated: animated)

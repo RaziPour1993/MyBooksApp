@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroViewController" customModule="My_Books_App" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-Oe-IJx" userLabel="Background Image View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-iX-5t2">
+                    <rect key="frame" x="188.5" y="760" width="37" height="37"/>
+                    <color key="color" red="0.9134156108" green="0.52386844160000001" blue="0.53470736740000002" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BN1-iX-5t2" secondAttribute="bottom" constant="65" id="7EI-kR-KIr"/>
+                <constraint firstAttribute="trailing" secondItem="fFb-Oe-IJx" secondAttribute="trailing" id="8vV-St-vMT"/>
+                <constraint firstItem="fFb-Oe-IJx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dzw-KA-M16"/>
+                <constraint firstAttribute="bottom" secondItem="fFb-Oe-IJx" secondAttribute="bottom" id="Iz5-cf-zYQ"/>
+                <constraint firstItem="fFb-Oe-IJx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RwL-CE-RYX"/>
+                <constraint firstItem="BN1-iX-5t2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pjf-Qq-ZZU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="145" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="681" height="1362"/>
+    </resources>
+</document>

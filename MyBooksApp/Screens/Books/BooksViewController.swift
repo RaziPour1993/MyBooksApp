@@ -1,5 +1,5 @@
 //
-//  IntroViewController.swift
+//  BooksViewController.swift
 //  MyBooksApp
 //
 //  Created by Mohammad Razipour on 2/4/20.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class BooksViewController: UIViewController {
     
-    var presenter: IntroPresenter!
+    var presenter: BooksPresenter!
     
-    init(_ presenter: IntroPresenter) {
+    init(_ presenter: BooksPresenter) {
         super.init(nibName: nil, bundle: nil)
         self.presenter = presenter
         self.presenter.set(view: self)
@@ -32,8 +32,7 @@ class IntroViewController: UIViewController {
     
 }
 
-
-extension IntroViewController: IntroPresentingView {
+extension BooksViewController: BooksPresentingView {
     
     
 }

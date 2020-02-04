@@ -16,12 +16,18 @@ class IntroPresenterIMP {
         self.delegate = delegate
     }
     
+    deinit {
+        print(self)
+    }
+    
 }
 
 extension IntroPresenterIMP: IntroPresenter {
     
     func present() {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            self.delegate?.preparationDone()
+        }
     }
     
     func set(view: IntroPresentingView) {

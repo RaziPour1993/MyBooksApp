@@ -36,6 +36,10 @@ extension BooksPresenterIMP: BooksPresenter {
         self.view = view
     }
     
+    func didTapAddBook() {
+        self.delegate?.addBook()
+    }
+    
 }
 
 extension BooksPresenterIMP {

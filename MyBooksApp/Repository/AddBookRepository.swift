@@ -1,17 +1,17 @@
 //
-//  BookRepository.swift
+//  AddBookRepository.swift
 //  MyBooksApp
 //
-//  Created by Mohammad Razipour on 2/4/20.
+//  Created by Mohammad Razipour on 2/5/20.
 //
 
 import Foundation
 
-protocol BooksRepository {
-    func books(completion: @escaping(Result<Books, RepositoryError>)-> Void)
+protocol AddBookRepository {
+    func addBook(_ item: Book, completion: @escaping(Result<Bool, RepositoryError>)-> Void)
 }
 
-class BooksRepositoryIMP: BooksRepository {
+class AddBookRepositoryIMP: AddBookRepository {
     
     var localBookRepository: BookRepository
     
@@ -19,8 +19,8 @@ class BooksRepositoryIMP: BooksRepository {
         self.localBookRepository = BookRepositoryIMP()
     }
     
-    func books(completion: @escaping (Result<Books, RepositoryError>) -> Void) {
-        self.localBookRepository.readAll { (result) in
+    func addBook(_ item: Book, completion: @escaping (Result<Bool, RepositoryError>) -> Void) {
+        self.localBookRepository.create(book: item) { (result) in
             switch result {
             case .success(let data):
                 completion(.success(data))

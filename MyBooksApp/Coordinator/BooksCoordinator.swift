@@ -37,10 +37,22 @@ final class BooksCoordinator: Coordinator {
 
 extension BooksCoordinator: BooksScreenDelegate {
     
+    func addBook() {
+        self.displayAddBookScreen()
+    }
+    
     func displayBooksScreen() {
         let vc = self.screenFactory.makeBooksScreen(delegate: self)
         self.router.setRoot(vc, with: true)
     }
     
+}
+
+extension BooksCoordinator: AddBookScreenDelegate {
+    
+    func displayAddBookScreen() {
+        let vc = self.screenFactory.makeAddBookScreen(delegate: self)
+        self.router.push(vc)
+    }
 }
 

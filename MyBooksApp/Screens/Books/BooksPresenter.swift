@@ -12,7 +12,7 @@ protocol BooksPresenter: Presenter {
 }
 
 protocol BooksPresentingView: PresentingView {
-    
+    func updated(books viewModel: TableViewModel)
 }
 
 protocol BooksScreenDelegate: ScreenDelegate {

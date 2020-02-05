@@ -13,7 +13,8 @@ final class MainScreenFactoryIMP: ScreenFactory {
     }
     
     func makeBooksScreen(delegate: BooksScreenDelegate) -> BooksViewController {
-        let presenter = BooksPresenterIMP(delegate)
+        let repository = BooksRepositoryIMP()
+        let presenter = BooksPresenterIMP(repository, delegate)
         let vc = BooksViewController(presenter)
         return vc
     }

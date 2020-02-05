@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BookEntity" representedClassName="BookEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="cover" optional="YES" attributeType="Binary">
+            <userInfo/>
+        </attribute>
+        <attribute name="descriptions" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="pagesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES">
+            <userInfo/>
+        </attribute>
+    </entity>
+    <elements>
+        <element name="BookEntity" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

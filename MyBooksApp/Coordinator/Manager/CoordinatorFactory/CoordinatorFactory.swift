@@ -4,6 +4,7 @@ protocol CoordinatorFactory: class {
     
     func makeMainCoordinator()-> MainCoordinator
     func makeIntroCoordinator(delegate: IntroCoordinatorDelegate)-> IntroCoordinator
+    func makeBooksCoordinator(delegate: BooksCoordinatorDelegate)-> BooksCoordinator
     
     /// Child Coordinators
     var childCoordinators: [Coordinator] { get set }

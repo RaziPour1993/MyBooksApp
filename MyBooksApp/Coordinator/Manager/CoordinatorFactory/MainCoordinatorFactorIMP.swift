@@ -24,4 +24,9 @@ final class MainCoordinatorFactorIMP: CoordinatorFactory {
         return coordinator
     }
     
+    func makeBooksCoordinator(delegate: BooksCoordinatorDelegate) -> BooksCoordinator {
+        let coordinator = BooksCoordinator(delegate, self, self.screenFactory, self.router)
+        self.addChildCoordinator(coordinator)
+        return coordinator
+    }
 }

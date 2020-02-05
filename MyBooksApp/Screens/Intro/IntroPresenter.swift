@@ -16,5 +16,5 @@ protocol IntroPresentingView: PresentingView {
 }
 
 protocol IntroScreenDelegate: ScreenDelegate {
-    
+    func preparationDone()
 }

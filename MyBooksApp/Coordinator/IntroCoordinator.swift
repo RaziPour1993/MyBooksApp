@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IntroCoordinatorDelegate: class {
-    
+    func didFinish(coordinator: IntroCoordinator)
 }
 
 final class IntroCoordinator: Coordinator {
@@ -29,9 +29,17 @@ final class IntroCoordinator: Coordinator {
         self.displayIntroScreen()
     }
     
+    deinit {
+        print(self)
+    }
+    
 }
 
 extension IntroCoordinator: IntroScreenDelegate {
+    
+    func preparationDone() {
+        self.delegate?.didFinish(coordinator: self)
+    }
     
     func displayIntroScreen() {
         let vc = self.screenFactory.makeIntroScreen(delegate: self)

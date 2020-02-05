@@ -24,12 +24,31 @@ final class MainCoordinator: Coordinator {
         startIntroCoordinator()
     }
     
+    deinit {
+        print(self)
+    }
+    
 }
 
 extension MainCoordinator: IntroCoordinatorDelegate {
     
+    func didFinish(coordinator: IntroCoordinator) {
+        self.coordinatorFactory.removeChildCoordinator(coordinator)
+        self.startBooksCoordinator()
+    }
+    
     func startIntroCoordinator() {
         let coordinator = self.coordinatorFactory.makeIntroCoordinator(delegate: self)
+        coordinator.start()
+    }
+    
+}
+
+
+extension MainCoordinator: BooksCoordinatorDelegate {
+    
+    func startBooksCoordinator() {
+        let coordinator = self.coordinatorFactory.makeBooksCoordinator(delegate: self)
         coordinator.start()
     }
     

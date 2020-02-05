@@ -30,6 +30,7 @@ class BooksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.config()
         self.tableViewConfig()
         self.presenter.present()
     }
@@ -37,6 +38,11 @@ class BooksViewController: UIViewController {
 }
 
 extension BooksViewController {
+    
+    func config() {
+        let addBookButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBookButtonAction))
+        self.navigationItem.rightBarButtonItem = addBookButton
+    }
     
     func tableViewConfig() {
         self.tableViewDataSource = TableViewDataSource()
@@ -49,6 +55,10 @@ extension BooksViewController {
         self.tableView.sectionHeaderHeight = 0.0
         self.tableView.sectionFooterHeight = 0.0
         self.tableView.register(BookTableViewCell.self)
+    }
+    
+    @objc func addBookButtonAction() {
+        self.presenter.didTapAddBook()
     }
     
 }

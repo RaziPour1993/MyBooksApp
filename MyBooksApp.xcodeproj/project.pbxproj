@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110ABE8623EAC60500B88DF8 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ABE8423EAC60500B88DF8 /* AddBookViewController.swift */; };
+		110ABE8723EAC60500B88DF8 /* AddBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 110ABE8523EAC60500B88DF8 /* AddBookViewController.xib */; };
+		110ABE8A23EAC83600B88DF8 /* AddBookPresenterIMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ABE8923EAC83600B88DF8 /* AddBookPresenterIMP.swift */; };
+		110ABE8B23EAC83600B88DF8 /* AddBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ABE8823EAC83600B88DF8 /* AddBookPresenter.swift */; };
+		110ABE8D23EACB8A00B88DF8 /* AddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110ABE8C23EACB8A00B88DF8 /* AddBookRepository.swift */; };
 		116170E023E8A488000C7267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116170DF23E8A488000C7267 /* Assets.xcassets */; };
 		116170E323E8A488000C7267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116170E123E8A488000C7267 /* LaunchScreen.storyboard */; };
 		11D147C523E8CDE000A66F48 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D147C423E8CDE000A66F48 /* IntroCoordinator.swift */; };
@@ -55,6 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110ABE8423EAC60500B88DF8 /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		110ABE8523EAC60500B88DF8 /* AddBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBookViewController.xib; sourceTree = "<group>"; };
+		110ABE8823EAC83600B88DF8 /* AddBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookPresenter.swift; sourceTree = "<group>"; };
+		110ABE8923EAC83600B88DF8 /* AddBookPresenterIMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookPresenterIMP.swift; sourceTree = "<group>"; };
+		110ABE8C23EACB8A00B88DF8 /* AddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookRepository.swift; sourceTree = "<group>"; };
 		116170D323E8A484000C7267 /* My Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		116170DF23E8A488000C7267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116170E223E8A488000C7267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110ABE8323EAC5ED00B88DF8 /* AddBook */ = {
+			isa = PBXGroup;
+			children = (
+				110ABE8823EAC83600B88DF8 /* AddBookPresenter.swift */,
+				110ABE8923EAC83600B88DF8 /* AddBookPresenterIMP.swift */,
+				110ABE8423EAC60500B88DF8 /* AddBookViewController.swift */,
+				110ABE8523EAC60500B88DF8 /* AddBookViewController.xib */,
+			);
+			path = AddBook;
+			sourceTree = "<group>";
+		};
 		1152452A23EAC3A400D60282 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +356,7 @@
 				11D1480923E9A4EC00A66F48 /* BookRepository */,
 				11D147FE23E9A0C400A66F48 /* DataBaseManeger */,
 				11D147F723E993C900A66F48 /* BooksRepository.swift */,
+				110ABE8C23EACB8A00B88DF8 /* AddBookRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -342,6 +364,7 @@
 		11ED6C8E23E8B398007695CD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				110ABE8323EAC5ED00B88DF8 /* AddBook */,
 				11D147CE23E9799F00A66F48 /* Books */,
 				11ED6C9D23E8BC1B007695CD /* Intro */,
 				116170E123E8A488000C7267 /* LaunchScreen.storyboard */,
@@ -418,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11D147D223E979BB00A66F48 /* BooksViewController.xib in Resources */,
+				110ABE8723EAC60500B88DF8 /* AddBookViewController.xib in Resources */,
 				116170E323E8A488000C7267 /* LaunchScreen.storyboard in Resources */,
 				11D147DD23E98BB600A66F48 /* BookTableViewCell.xib in Resources */,
 				11D147C823E958CD00A66F48 /* Localization.strings in Resources */,
@@ -434,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11ED6C9623E8B398007695CD /* Router.swift in Sources */,
+				110ABE8623EAC60500B88DF8 /* AddBookViewController.swift in Sources */,
 				11D147C523E8CDE000A66F48 /* IntroCoordinator.swift in Sources */,
 				11ED6CA323E8BCBB007695CD /* IntroPresenter.swift in Sources */,
 				11ED6CA023E8BC34007695CD /* IntroViewController.swift in Sources */,
@@ -447,6 +472,8 @@
 				11D147EE23E98BF000A66F48 /* TableViewFooterSectionModel.swift in Sources */,
 				11D147EC23E98BF000A66F48 /* TableViewHeaderSection.swift in Sources */,
 				11D147E723E98BF000A66F48 /* TableViewHelper.swift in Sources */,
+				110ABE8B23EAC83600B88DF8 /* AddBookPresenter.swift in Sources */,
+				110ABE8A23EAC83600B88DF8 /* AddBookPresenterIMP.swift in Sources */,
 				11D147EB23E98BF000A66F48 /* TableViewSectionModel.swift in Sources */,
 				11ED6C9323E8B398007695CD /* Coordinator.swift in Sources */,
 				11ED6C9923E8B398007695CD /* MainCoordinator.swift in Sources */,
@@ -469,6 +496,7 @@
 				11ED6CA523E8BCCC007695CD /* IntroPresenterIMP.swift in Sources */,
 				11D1480B23E9A54000A66F48 /* BookRepositoryIMP.swift in Sources */,
 				11D147CD23E9591D00A66F48 /* String.swift in Sources */,
+				110ABE8D23EACB8A00B88DF8 /* AddBookRepository.swift in Sources */,
 				11ED6C9A23E8B398007695CD /* Connectable.swift in Sources */,
 				11ED6C9423E8B398007695CD /* Presentable.swift in Sources */,
 				11D147D123E979BB00A66F48 /* BooksViewController.swift in Sources */,

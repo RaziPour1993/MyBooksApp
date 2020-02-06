@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BooksPresenter: Presenter {
+protocol BooksPresenter: Presenter, BooksScreenManeger {
     func set(view: BooksPresentingView)
     func didTapAddBook()
 }
@@ -18,4 +18,8 @@ protocol BooksPresentingView: PresentingView {
 
 protocol BooksScreenDelegate: ScreenDelegate {
     func addBook()
+}
+
+protocol BooksScreenManeger: class {
+    func bookAdded(book: Book)
 }

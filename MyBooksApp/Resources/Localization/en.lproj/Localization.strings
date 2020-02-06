@@ -1,1 +1,10 @@
-
+"Descriptions" = "Descriptions";
+"AddBook" = "Add Book";
+"PleaseEnterName" = "Please enter name";
+"PleaseEnterAuthor" = "Please enter author";
+"PleaseEnterPagesCount" = "Please enter pages count";
+"InvalidPagesCount" = "Invalid pages count";
+"File" = "File";
+"PhotoLibrary" = "Photo Library";
+"TakePhoto" = "Take Photo";
+"MyBooks" = "My Books";

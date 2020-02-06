@@ -31,6 +31,7 @@ class BooksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.config()
+        self.viewConfig()
         self.tableViewConfig()
         self.presenter.present()
     }
@@ -42,6 +43,10 @@ extension BooksViewController {
     func config() {
         let addBookButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBookButtonAction))
         self.navigationItem.rightBarButtonItem = addBookButton
+    }
+    
+    func viewConfig() {
+        self.navigationItem.title = "MyBooks".localized
     }
     
     func tableViewConfig() {

@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BookEntity" representedClassName="BookEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="author" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="cover" optional="YES" attributeType="Binary">
-            <userInfo/>
-        </attribute>
-        <attribute name="descriptions" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="name" optional="YES" attributeType="String">
-            <userInfo/>
-        </attribute>
-        <attribute name="pagesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES">
-            <userInfo/>
-        </attribute>
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="cover" optional="YES" attributeType="Binary"/>
+        <attribute name="descriptions" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pagesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="readTimerRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReadTimerEntity" inverseName="bookRelationship" inverseEntity="ReadTimerEntity"/>
+        <relationship name="sessionsReadRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SessionReadEntity" inverseName="bookRelationship" inverseEntity="SessionReadEntity"/>
+    </entity>
+    <entity name="ReadTimerEntity" representedClassName="ReadTimerEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="currentPage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastReadDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalReadTimer" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="bookRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookEntity" inverseName="readTimerRelationship" inverseEntity="BookEntity"/>
+    </entity>
+    <entity name="SessionReadEntity" representedClassName="SessionReadEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pageNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pagesCountRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalReadTimer" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="bookRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookEntity" inverseName="sessionsReadRelationship" inverseEntity="BookEntity"/>
     </entity>
     <elements>
-        <element name="BookEntity" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="BookEntity" positionX="-949.59765625" positionY="-353.125" width="128" height="148"/>
+        <element name="SessionReadEntity" positionX="-1179.56640625" positionY="-172.515625" width="128" height="133"/>
+        <element name="ReadTimerEntity" positionX="-662.8359375" positionY="-298.6796875" width="128" height="133"/>
     </elements>
 </model>

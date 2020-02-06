@@ -17,12 +17,12 @@ class BooksViewModel: TableViewModel {
     
     private weak var delegate: BooksViewModelDelegate?
     
-    init(delegate: BooksViewModelDelegate) {
+    init(delegate: BooksViewModelDelegate?) {
         self.sections = []
         self.delegate = delegate
     }
     
-    init(_ books: Books, delegate: BooksViewModelDelegate) {
+    init(_ books: Books, delegate: BooksViewModelDelegate?) {
         
         self.delegate = delegate
         

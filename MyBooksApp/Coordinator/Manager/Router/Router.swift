@@ -17,4 +17,6 @@ protocol Router: Presentable {
     func setRoot(_ module: Presentable?)
     func setRoot(_ module: Presentable?, with navbar: Bool)
     
+    func popModule()
+    
 }

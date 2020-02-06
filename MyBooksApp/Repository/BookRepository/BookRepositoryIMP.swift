@@ -23,7 +23,7 @@ class BookRepositoryIMP: BookRepository {
         let entity = BookEntity(context: self.dataBaseManeger.managedObjectContext)
         entity.name = book.name
         entity.author = book.author
-        entity.cover = book.cover?.pngData()
+        entity.cover = book.cover
         entity.pagesCount = book.pagesCount
         entity.descriptions = book.descriptions
         

@@ -73,4 +73,9 @@ final class MainRouterIMP: NSObject, Router {
         }
     }
     
+    func popModule() {
+        guard let rootController = self.window?.rootViewController as? UINavigationController else { return }
+        rootController.popViewController(animated: true)
+    }
+    
 }

@@ -41,5 +41,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To take a photo for your profile picture or to send a photo to your adviser, AvidAdvice needs your permission to access to your photo gallery</string>
 </dict>
 </plist>

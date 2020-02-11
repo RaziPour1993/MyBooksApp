@@ -22,8 +22,13 @@
 		112B9F2823EAF18C00CB0A07 /* SelectFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112B9F2723EAF18C00CB0A07 /* SelectFile.swift */; };
 		112B9F2A23EB839700CB0A07 /* ReadTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112B9F2923EB839700CB0A07 /* ReadTimer.swift */; };
 		112B9F2C23EBF6A200CB0A07 /* SessionRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112B9F2B23EBF6A200CB0A07 /* SessionRead.swift */; };
+		1160DECE23F2A5630070E280 /* ReadMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DECD23F2A5630070E280 /* ReadMode.swift */; };
+		1160DED123F2C6E60070E280 /* BookInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DECF23F2C6E60070E280 /* BookInfoTableViewCell.swift */; };
+		1160DED223F2C6E60070E280 /* BookInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1160DED023F2C6E60070E280 /* BookInfoTableViewCell.xib */; };
+		1160DED423F2C96F0070E280 /* BookInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DED323F2C96F0070E280 /* BookInfoCellViewModel.swift */; };
 		116170E023E8A488000C7267 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116170DF23E8A488000C7267 /* Assets.xcassets */; };
 		116170E323E8A488000C7267 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116170E123E8A488000C7267 /* LaunchScreen.storyboard */; };
+		11836B9023ECCC7C00BA540E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11836B8F23ECCC7C00BA540E /* Double.swift */; };
 		11D147C523E8CDE000A66F48 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D147C423E8CDE000A66F48 /* IntroCoordinator.swift */; };
 		11D147C823E958CD00A66F48 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11D147CA23E958CD00A66F48 /* Localization.strings */; };
 		11D147CD23E9591D00A66F48 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D147CC23E9591D00A66F48 /* String.swift */; };
@@ -67,6 +72,7 @@
 		11ED6CA123E8BC34007695CD /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11ED6C9F23E8BC34007695CD /* IntroViewController.xib */; };
 		11ED6CA323E8BCBB007695CD /* IntroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED6CA223E8BCBB007695CD /* IntroPresenter.swift */; };
 		11ED6CA523E8BCCC007695CD /* IntroPresenterIMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ED6CA423E8BCCC007695CD /* IntroPresenterIMP.swift */; };
+		11FAD91523F1436B003DCA6E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAD91423F1436B003DCA6E /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,10 +91,15 @@
 		112B9F2723EAF18C00CB0A07 /* SelectFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFile.swift; sourceTree = "<group>"; };
 		112B9F2923EB839700CB0A07 /* ReadTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTimer.swift; sourceTree = "<group>"; };
 		112B9F2B23EBF6A200CB0A07 /* SessionRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRead.swift; sourceTree = "<group>"; };
+		1160DECD23F2A5630070E280 /* ReadMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMode.swift; sourceTree = "<group>"; };
+		1160DECF23F2C6E60070E280 /* BookInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoTableViewCell.swift; sourceTree = "<group>"; };
+		1160DED023F2C6E60070E280 /* BookInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookInfoTableViewCell.xib; sourceTree = "<group>"; };
+		1160DED323F2C96F0070E280 /* BookInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoCellViewModel.swift; sourceTree = "<group>"; };
 		116170D323E8A484000C7267 /* My Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		116170DF23E8A488000C7267 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116170E223E8A488000C7267 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116170E423E8A488000C7267 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11836B8F23ECCC7C00BA540E /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		11D147C423E8CDE000A66F48 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
 		11D147C923E958CD00A66F48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		11D147CC23E9591D00A66F48 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -132,6 +143,7 @@
 		11ED6C9F23E8BC34007695CD /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 		11ED6CA223E8BCBB007695CD /* IntroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPresenter.swift; sourceTree = "<group>"; };
 		11ED6CA423E8BCCC007695CD /* IntroPresenterIMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPresenterIMP.swift; sourceTree = "<group>"; };
+		11FAD91423F1436B003DCA6E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +213,8 @@
 				110ABE9223EAD03800B88DF8 /* TextView.swift */,
 				110ABE9423EAE57D00B88DF8 /* ViewController.swift */,
 				110ABE9623EAE60A00B88DF8 /* View.swift */,
+				11836B8F23ECCC7C00BA540E /* Double.swift */,
+				11FAD91423F1436B003DCA6E /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -221,6 +235,8 @@
 		11D147D923E98B9700A66F48 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				1160DECF23F2C6E60070E280 /* BookInfoTableViewCell.swift */,
+				1160DED023F2C6E60070E280 /* BookInfoTableViewCell.xib */,
 				11D147DA23E98BB600A66F48 /* BookTableViewCell.swift */,
 				11D147DB23E98BB600A66F48 /* BookTableViewCell.xib */,
 			);
@@ -247,6 +263,7 @@
 			children = (
 				11D147F023E98F9A00A66F48 /* BooksViewModel.swift */,
 				11D147F523E9908700A66F48 /* BookCellViewModel.swift */,
+				1160DED323F2C96F0070E280 /* BookInfoCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -254,10 +271,11 @@
 		11D147F223E98FE500A66F48 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				11D147F323E98FF100A66F48 /* Book.swift */,
 				112B9F2323EAE9C300CB0A07 /* AddBook.swift */,
+				11D147F323E98FF100A66F48 /* Book.swift */,
 				112B9F2923EB839700CB0A07 /* ReadTimer.swift */,
 				112B9F2B23EBF6A200CB0A07 /* SessionRead.swift */,
+				1160DECD23F2A5630070E280 /* ReadMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,6 +492,7 @@
 				110ABE8723EAC60500B88DF8 /* AddBookViewController.xib in Resources */,
 				116170E323E8A488000C7267 /* LaunchScreen.storyboard in Resources */,
 				11D147DD23E98BB600A66F48 /* BookTableViewCell.xib in Resources */,
+				1160DED223F2C6E60070E280 /* BookInfoTableViewCell.xib in Resources */,
 				11D147C823E958CD00A66F48 /* Localization.strings in Resources */,
 				116170E023E8A488000C7267 /* Assets.xcassets in Resources */,
 				11ED6CA123E8BC34007695CD /* IntroViewController.xib in Resources */,
@@ -505,10 +524,12 @@
 				110ABE8B23EAC83600B88DF8 /* AddBookPresenter.swift in Sources */,
 				110ABE8F23EACF7C00B88DF8 /* TextFieldInput.swift in Sources */,
 				110ABE8A23EAC83600B88DF8 /* AddBookPresenterIMP.swift in Sources */,
+				1160DECE23F2A5630070E280 /* ReadMode.swift in Sources */,
 				11D147EB23E98BF000A66F48 /* TableViewSectionModel.swift in Sources */,
 				11ED6C9323E8B398007695CD /* Coordinator.swift in Sources */,
 				11ED6C9923E8B398007695CD /* MainCoordinator.swift in Sources */,
 				11D147D823E97A6400A66F48 /* BooksCoordinator.swift in Sources */,
+				1160DED123F2C6E60070E280 /* BookInfoTableViewCell.swift in Sources */,
 				11D147F823E993C900A66F48 /* BooksRepository.swift in Sources */,
 				11D147F423E98FF100A66F48 /* Book.swift in Sources */,
 				11D147F623E9908700A66F48 /* BookCellViewModel.swift in Sources */,
@@ -521,17 +542,20 @@
 				11D1480823E9A3A600A66F48 /* BookRepository.swift in Sources */,
 				112B9F2A23EB839700CB0A07 /* ReadTimer.swift in Sources */,
 				110ABE9523EAE57D00B88DF8 /* ViewController.swift in Sources */,
+				11836B9023ECCC7C00BA540E /* Double.swift in Sources */,
 				110ABE9723EAE60A00B88DF8 /* View.swift in Sources */,
 				11D147DC23E98BB600A66F48 /* BookTableViewCell.swift in Sources */,
 				11D147FB23E996A400A66F48 /* RepositoryDefine.swift in Sources */,
 				112B9F2823EAF18C00CB0A07 /* SelectFile.swift in Sources */,
 				11ED6C9023E8B398007695CD /* CoordinatorFactory.swift in Sources */,
 				11ED6C9B23E8B398007695CD /* Presenter.swift in Sources */,
+				11FAD91523F1436B003DCA6E /* Date.swift in Sources */,
 				11D147E923E98BF000A66F48 /* TableViewSection.swift in Sources */,
 				11D147E823E98BF000A66F48 /* TableViewDataSource.swift in Sources */,
 				11ED6CA523E8BCCC007695CD /* IntroPresenterIMP.swift in Sources */,
 				11D1480B23E9A54000A66F48 /* BookRepositoryIMP.swift in Sources */,
 				11D147CD23E9591D00A66F48 /* String.swift in Sources */,
+				1160DED423F2C96F0070E280 /* BookInfoCellViewModel.swift in Sources */,
 				110ABE9123EACFE000B88DF8 /* TextViewInput.swift in Sources */,
 				110ABE8D23EACB8A00B88DF8 /* AddBookRepository.swift in Sources */,
 				112B9F2423EAE9C300CB0A07 /* AddBook.swift in Sources */,

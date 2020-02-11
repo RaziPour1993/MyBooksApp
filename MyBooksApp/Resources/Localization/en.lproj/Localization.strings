@@ -8,3 +8,9 @@
 "PhotoLibrary" = "Photo Library";
 "TakePhoto" = "Take Photo";
 "MyBooks" = "My Books";
+"YouAreCurrentlyReadingABook" = "You are currently reading a book";
+"EnterPageNumber" = "Enter page number";
+"PageNumner" = "Page numner";
+"InvalidPageNumber" = "Invalid page number";
+"NumberGreaterPageCount" = "The number entered is greater than the number of pages in the book";
+"AlreadyReadPage" = "You have already read this page";

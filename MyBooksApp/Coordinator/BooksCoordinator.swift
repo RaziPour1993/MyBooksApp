@@ -43,6 +43,10 @@ final class BooksCoordinator: Coordinator {
 
 extension BooksCoordinator: BooksScreenDelegate {
     
+    func didSelect(book: Book) {
+        
+    }
+    
     func addBook() {
         self.displayAddBookScreen()
     }

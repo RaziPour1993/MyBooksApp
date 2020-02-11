@@ -26,7 +26,7 @@ extension PresentingView where Self: UIViewController {
     }
     
     func warning(message: String) {
-        print(message)
+        self.showToast(message.localized)
     }
     
 }

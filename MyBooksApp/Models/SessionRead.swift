@@ -11,14 +11,17 @@ typealias SessionsRead = [SessionRead]
 
 struct SessionRead {
     
-    var startDate:Date?
-    var endDate: Date?
+    var startDate:Date
+    var endDate: Date
+    var totalReadTimer: TimeInterval
     var pageNumber: Int16
-    var totalReadTimer: TimeInterval?
-    var pagesCountRead: Int16?
     
-    init() {
-        self.pageNumber = 1
+    init(_ startDate: Date, _ endDate: Date, _ totalReadTimer: TimeInterval, _ pageNumber: Int16) {
+        self.startDate = startDate
+        self.endDate = endDate
+        self.totalReadTimer = totalReadTimer
+        self.pageNumber = pageNumber
     }
     
 }
+

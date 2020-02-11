@@ -60,6 +60,7 @@ extension BooksViewController {
         self.tableView.sectionHeaderHeight = 0.0
         self.tableView.sectionFooterHeight = 0.0
         self.tableView.register(BookTableViewCell.self)
+        self.tableView.register(BookInfoTableViewCell.self)
     }
     
     @objc func addBookButtonAction() {
@@ -73,6 +74,12 @@ extension BooksViewController: BooksPresentingView {
     func updated(books viewModel: TableViewModel) {
         self.tableViewDataSource.viewModel = viewModel
         self.tableView.reloadData()
+    }
+    
+    func enterPage() {
+        self.alertWithTextField(message: "EnterPageNumber".localized, placeholder: "PageNumner".localized) { (result) in
+            self.presenter.didEnterPage(number: result)
+        }
     }
     
 }

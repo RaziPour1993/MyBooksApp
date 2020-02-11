@@ -27,6 +27,25 @@ private var managedKeyboardScrollViewWrapperKey = "ManagedKeyboardScrollViewWrap
 
 extension UIViewController {
     
+    public func alertWithTextField(title: String? = nil, message: String? = nil, placeholder: String? = nil, completion: @escaping ((String) -> Void) = { _ in }) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addTextField() { newTextField in
+            newTextField.placeholder = placeholder
+            newTextField.keyboardType = .numberPad
+        }
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel) { _ in completion("") })
+        alert.addAction(UIAlertAction(title: "Ok".localized, style: .default) { action in
+            if
+                let textFields = alert.textFields,
+                let tf = textFields.first,
+                let result = tf.text
+            { completion(result) }
+            else
+            { completion("") }
+        })
+        navigationController?.present(alert, animated: true)
+    }
+    
     @objc func hideKeyboardWhenTap() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false

@@ -16,6 +16,7 @@ protocol BookTableViewCellDelegate: class {
 
 class BookTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
+    @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var coverContainerView: UIView!
@@ -52,14 +53,13 @@ class BookTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
             
             model.viewUpdateDelegate = self
             self.delegate = model
-            self.timerLabel.text = model.currentTime.asString(style: .positional)
+            self.timerLabel.text = model.currentTime.stringFromTimeInterval()
             self.nameLabel.text = model.name
             self.authorLabel.text = model.author
             self.coverImageView.image = model.cover
             self.pagesCountLabel.text = model.pagesCount
             self.currentPageLabel.text = model.currentPage
-            self.progressView.progress = Float(Int(model.pagesCount) ?? 1)
-            self.progressView.setProgress(model.progress, animated: true)
+            self.progressView.progress = model.progress
             self.updateView(mode: model.readMode)
         }
         
@@ -87,6 +87,10 @@ extension BookTableViewCell {
         self.endButton.addTarget(self, action: #selector(self.endButtonAction), for: .touchDown)
         self.pauseButton.addTarget(self, action: #selector(self.pauseButtonAction), for: .touchDown)
         self.resumeButton.addTarget(self, action: #selector(self.resumeButtonAction), for: .touchDown)
+        self.endButton.setBorder(borderWidth: 0)
+        self.pauseButton.setBorder(borderWidth: 0)
+        self.resumeButton.setBorder(borderWidth: 0)
+        self.contentContainerView.setBorder(color: #colorLiteral(red: 0.9568628669, green: 0.2627450228, blue: 0.2117646933, alpha: 1), borderWidth: 1, cornerRadius: 10)
     }
     
     @objc func endButtonAction() {

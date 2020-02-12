@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     
-    func toString(withFormat format: String = "MMM d,yyyy HH:m:ss") -> String {
+    func toString(withFormat format: String = "yyyy/MM/d, HH:mm:ss") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.calendar = Calendar(identifier: .gregorian)
         dateFormatter.dateFormat = format
@@ -20,3 +20,4 @@ extension Date {
     }
     
 }
+

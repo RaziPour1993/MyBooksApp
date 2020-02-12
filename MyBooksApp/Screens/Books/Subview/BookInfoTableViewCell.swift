@@ -12,7 +12,6 @@ protocol BookInfoTableViewCellDelegate: class {
     func didSelectBook()
 }
 
-
 class BookInfoTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
     @IBOutlet weak var nameLabel: UILabel!

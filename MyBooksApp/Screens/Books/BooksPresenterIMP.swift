@@ -58,6 +58,10 @@ extension BooksPresenterIMP: BooksPresenter {
         self.books.append(book)
     }
     
+    func bookDeleted() {
+        self.getBooks()
+    }
+    
 }
 
 extension BooksPresenterIMP {

@@ -33,4 +33,11 @@ final class MainScreenFactoryIMP: ScreenFactory {
         return vc
     }
     
+    func makeBookDetailScreen(delegate: BookDetailScreenDelegate, _ book: Book) -> BookDetailViewController {
+        let repository = BookDetailRepositoryIMP()
+        let presenter = BookDetailPresenterIMP(book ,repository, delegate)
+        let vc = BookDetailViewController(presenter)
+        return vc
+    }
+    
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 typealias SessionsRead = [SessionRead]
 
@@ -21,6 +22,13 @@ struct SessionRead {
         self.endDate = endDate
         self.totalReadTimer = totalReadTimer
         self.pageNumber = pageNumber
+    }
+    
+    init(_ entity: SessionReadEntity) {
+        self.startDate = entity.startDate!
+        self.endDate = entity.endDate!
+        self.totalReadTimer = entity.totalReadTimer
+        self.pageNumber = entity.pageNumber
     }
     
 }

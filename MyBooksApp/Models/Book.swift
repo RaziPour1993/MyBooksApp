@@ -54,9 +54,17 @@ struct Book {
         }
         
         self.readTimer = ReadTimer(entity: readTimerEntity)
+        
         self.sessionsRead = []
+        
+        self.sessionsRead = entity.sessionsReadRelationship!.compactMap({ (item) -> SessionRead? in
+            guard let entity = item as? SessionReadEntity else {
+                return nil
+            }
+            return SessionRead(entity)
+        })
+        
     }
-    
     
     var totalReadTime: Double {
         var total: Double = 0.0

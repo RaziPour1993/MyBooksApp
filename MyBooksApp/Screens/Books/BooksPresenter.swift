@@ -25,4 +25,5 @@ protocol BooksScreenDelegate: ScreenDelegate {
 
 protocol BooksScreenManeger: class {
     func bookAdded(book: Book)
+    func bookDeleted()
 }

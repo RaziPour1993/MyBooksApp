@@ -135,7 +135,7 @@
                 <outlet property="startButton" destination="0uT-Ab-bO1" id="U5x-Ok-nGd"/>
                 <outlet property="timerLabel" destination="hu4-WI-9L0" id="i7d-X0-K3R"/>
             </connections>
-            <point key="canvasLocation" x="-700" y="-132"/>
+            <point key="canvasLocation" x="-809" y="-202"/>
         </tableViewCell>
     </objects>
     <resources>

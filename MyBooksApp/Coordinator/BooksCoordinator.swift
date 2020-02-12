@@ -44,7 +44,7 @@ final class BooksCoordinator: Coordinator {
 extension BooksCoordinator: BooksScreenDelegate {
     
     func didSelect(book: Book) {
-        
+        self.displayBookDetailScreen(book)
     }
     
     func addBook() {
@@ -70,4 +70,19 @@ extension BooksCoordinator: AddBookScreenDelegate {
         let vc = self.screenFactory.makeAddBookScreen(delegate: self)
         self.router.push(vc)
     }
+}
+
+
+extension BooksCoordinator: BookDetailScreenDelegate {
+    
+    func bookDeleted() {
+        self.booksScreenManeger?.bookDeleted()
+        self.router.popModule()
+    }
+    
+    func displayBookDetailScreen(_ book: Book) {
+        let vc = self.screenFactory.makeBookDetailScreen(delegate: self, book)
+        self.router.push(vc)
+    }
+    
 }

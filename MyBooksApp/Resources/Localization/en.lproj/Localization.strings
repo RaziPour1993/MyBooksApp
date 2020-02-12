@@ -14,3 +14,4 @@
 "InvalidPageNumber" = "Invalid page number";
 "NumberGreaterPageCount" = "The number entered is greater than the number of pages in the book";
 "AlreadyReadPage" = "You have already read this page";
+"BookDetail" = "Book Detail";

@@ -33,7 +33,7 @@ struct Book {
         self.id = UUID().uuidString
         self.readTimer = ReadTimer()
         self.sessionsRead = []
-        self.currentPage = 1
+        self.currentPage = 0
     }
     
     init?(_ entity: BookEntity) {

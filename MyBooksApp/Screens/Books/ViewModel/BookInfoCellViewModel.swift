@@ -44,10 +44,10 @@ class BookInfoCellViewModel: TableViewCellModel, Equatable {
         self.author = book.author
         self.pagesCount = book.pagesCount.description
         self.currentPage = book.currentPage.description
-        self.progress = Float(book.currentPage)
+        self.progress = Float((Float(book.currentPage) / Float(book.pagesCount)))
         self.descriptions = book.descriptions
         if let cover =  book.cover { self.cover = UIImage(data: cover) }
-        self.totalTime = self.book.totalReadTime.asString(style: .positional)
+        self.totalTime = self.book.totalReadTime.stringFromTimeInterval()
     }
     
 }

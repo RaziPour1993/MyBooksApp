@@ -28,7 +28,7 @@ class SessionReadCellViewModel: TableViewCellModel {
     init(_ item: SessionRead, delegate: SessionReadCellViewModelDelegate?) {
         self.startDate = item.startDate.toString()
         self.endDate = item.endDate.toString()
-        self.totalReadTimer = item.totalReadTimer.asString(style: .positional)
+        self.totalReadTimer = item.totalReadTimer.stringFromTimeInterval()
         self.pageNumber = item.pageNumber.description
     }
     

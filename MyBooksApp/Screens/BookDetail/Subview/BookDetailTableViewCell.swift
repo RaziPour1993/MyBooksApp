@@ -27,11 +27,10 @@ class BookDetailTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
             self.timerLabel.text = model.totalTime
             self.nameLabel.text = model.name
             self.authorLabel.text = model.author
-            self.coverImageView.image = model.cover
+            self.coverImageView.image = model.cover ?? #imageLiteral(resourceName: "background")
             self.pagesCountLabel.text = model.pagesCount
             self.currentPageLabel.text = model.currentPage
-            self.progressView.progress = Float(Int(model.pagesCount) ?? 1)
-            self.progressView.setProgress(model.progress, animated: true)
+            self.progressView.progress = model.progress
             
         }
         
@@ -39,7 +38,8 @@ class BookDetailTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.coverContainerView.setBorder()
+        self.coverContainerView.setBorder()
     }
     
     override func prepareForReuse() {

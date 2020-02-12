@@ -9,6 +9,7 @@ import UIKit
 
 class SessionReadTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
+    @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var pageNumberLabel: UILabel!
@@ -31,7 +32,7 @@ class SessionReadTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.contentContainerView.setBorder()
     }
     
     override func prepareForReuse() {

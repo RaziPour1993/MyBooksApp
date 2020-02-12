@@ -50,7 +50,7 @@ class BookCellViewModel: TableViewCellModel {
         self.author = book.author
         self.pagesCount = book.pagesCount.description
         self.currentPage = book.currentPage.description
-        self.progress = Float(book.currentPage)
+        self.progress = Float((Float(book.currentPage) / Float(book.pagesCount)))
         self.descriptions = book.descriptions
         if let cover =  book.cover { self.cover = UIImage(data: cover) }
         self.currentTime = 0
@@ -84,7 +84,7 @@ class BookCellViewModel: TableViewCellModel {
         self.timer.invalidate()
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { result in
             self.currentTime += 1
-            self.viewUpdateDelegate?.updateTimer(time: self.currentTime.asString(style: .positional))
+            self.viewUpdateDelegate?.updateTimer(time: self.currentTime.stringFromTimeInterval())
         })
         
     }

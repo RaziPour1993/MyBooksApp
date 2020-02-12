@@ -14,6 +14,7 @@ protocol BookInfoTableViewCellDelegate: class {
 
 class BookInfoTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
+    @IBOutlet weak var contentContainerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var coverContainerView: UIView!
@@ -44,15 +45,16 @@ class BookInfoTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
                 return
             }
             
+            
             self.delegate = model
             self.timerLabel.text = model.totalTime
             self.nameLabel.text = model.name
             self.authorLabel.text = model.author
-            self.coverImageView.image = model.cover
+            self.coverImageView.image = model.cover ?? #imageLiteral(resourceName: "background")
             self.pagesCountLabel.text = model.pagesCount
             self.currentPageLabel.text = model.currentPage
-            self.progressView.progress = Float(Int(model.pagesCount) ?? 1)
-            self.progressView.setProgress(model.progress, animated: true)
+            self.progressView.progress = model.progress
+
         }
         
     }
@@ -76,6 +78,9 @@ extension BookInfoTableViewCell {
     
     func config() {
         self.startButton.addTarget(self, action: #selector(self.startButtonAction), for: .touchDown)
+        self.contentContainerView.setBorder(borderWidth: 1, cornerRadius: 10)
+        self.startButton.setBorder(borderWidth: 0)
+        self.coverContainerView.setBorder()
     }
     
     @objc func startButtonAction() {

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Book1",
+    "name": "Book1",
+    "author": "Book1",
+    "pagesCount": 10,
+    "cover": "books",
+    "descriptions": "Book1",
+    "currentPage": 6
+  },
+  {
+    "id": "Book2",
+    "name": "Book2",
+    "author": "Book2",
+    "pagesCount": 10,
+    "cover": "books",
+    "descriptions": "Book2",
+    "currentPage": 6
+  }
+]

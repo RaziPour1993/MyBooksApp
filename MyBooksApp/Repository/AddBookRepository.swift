@@ -16,7 +16,7 @@ class AddBookRepositoryIMP: AddBookRepository {
     var localBookRepository: BookRepository
     
     init() {
-        self.localBookRepository = BookRepositoryIMP()
+        self.localBookRepository = BookEntityIMP()
     }
     
     func addBook(_ item: Book, completion: @escaping (Result<Bool, RepositoryError>) -> Void) {

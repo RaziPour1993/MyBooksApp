@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func start(){
         window = UIWindow(frame: UIScreen.main.bounds)
-        let screenFactory = MainScreenFactoryIMP()
+        let screenFactory = TestScreenFactoryIMP()
         let router = MainRouterIMP(window: self.window)
         self.coordinatorFactory = MainCoordinatorFactorIMP(screenFactory: screenFactory, router: router)
         

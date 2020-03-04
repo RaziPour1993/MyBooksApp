@@ -27,7 +27,7 @@ class BooksPresenterIMP {
     
     var currentBook: Book?
     
-    init(_ repository: BooksRepository, _ delegate: BooksScreenDelegate) {
+    init(_ repository: BooksRepository, _ delegate: BooksScreenDelegate?) {
         self.books = []
         self.delegate = delegate
         self.repository = repository

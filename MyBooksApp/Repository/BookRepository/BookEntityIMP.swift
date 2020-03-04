@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class BookRepositoryIMP: BookRepository {
+class BookEntityIMP: BookRepository {
     
     var dataBaseManeger: CoreDataManager
     let entityName: String

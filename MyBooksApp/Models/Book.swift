@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import UIKit
 
 typealias Books = [Book]
 
-struct Book {
+struct Book: Decodable {
     
     var id: String
     var name: String
@@ -22,6 +21,16 @@ struct Book {
     
     var readTimer: ReadTimer
     var sessionsRead: SessionsRead
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case author = "author"
+        case pagesCount = "pagesCount"
+        case cover = "cover"
+        case descriptions = "descriptions"
+        case currentPage = "currentPage"
+    }
     
     init(_ name: String, _ author: String, _ pagesCount: Int16, _ cover: Data? = nil, _ descriptions: String = "") {
         self.name = name
@@ -71,4 +80,19 @@ struct Book {
         self.sessionsRead.forEach { (item) in total += item.totalReadTimer }
         return total
     }
+    
+    init(from decoder: Decoder) throws {
+        let value = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try value.decode(String.self, forKey: .id)
+        self.name = try value.decode(String.self, forKey: .name)
+        self.author = try value.decode(String.self, forKey: .author)
+        self.pagesCount = try value.decode(Int16.self, forKey: .pagesCount)
+        self.descriptions = try value.decode(String.self, forKey: .descriptions)
+        self.currentPage = try value.decode(Int16.self, forKey: .currentPage)
+        self.currentPage = try value.decode(Int16.self, forKey: .currentPage)
+    
+        self.readTimer = ReadTimer()
+        self.sessionsRead = []
+    }
+    
 }

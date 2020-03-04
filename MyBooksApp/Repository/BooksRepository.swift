@@ -17,7 +17,7 @@ class BooksRepositoryIMP: BooksRepository {
     var localBookRepository: BookRepository
     
     init() {
-        self.localBookRepository = BookRepositoryIMP()
+        self.localBookRepository = BookEntityIMP()
     }
     
     func books(completion: @escaping (Result<Books, RepositoryError>) -> Void) {
@@ -40,6 +40,32 @@ class BooksRepositoryIMP: BooksRepository {
                 completion(.failure(error))
             }
         }
+    }
+    
+}
+
+class BooksLocalRepositoryIMP: BooksRepository {
+    
+    init() {
+        
+    }
+    
+    func books(completion: @escaping (Result<Books, RepositoryError>) -> Void) {
+        if let path = Bundle.main.path(forResource: "BooksJson", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                let items = try JSONDecoder().decode(Books.self, from: data)
+                print(jsonResult)
+                completion(.success(items))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func update(book: Book, completion: @escaping (Result<Bool, RepositoryError>) -> Void) {
+        completion(.success(true))
     }
     
 }

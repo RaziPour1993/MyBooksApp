@@ -16,7 +16,7 @@ class BookDetailRepositoryIMP: BookDetailRepository {
     var localBookRepository: BookRepository
     
     init() {
-        self.localBookRepository = BookRepositoryIMP()
+        self.localBookRepository = BookEntityIMP()
     }
     
     func deleteBook(_ item: Book, completion: @escaping (Result<Bool, RepositoryError>) -> Void) {
